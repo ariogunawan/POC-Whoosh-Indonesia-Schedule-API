@@ -9,7 +9,7 @@ class DBTools:
     # os.path.abspath(os.getcwd())
     dir_name = os.path.dirname(os.path.abspath(__file__))
     db_name = "db-kereta-cepat.db"
-    db_file_path = f"{dir_name}\\db\\{db_name}"
+    db_file_path = f"{dir_name}/db/{db_name}"
 
     def __init__(self):
         self.db_connect = None
