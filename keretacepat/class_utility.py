@@ -38,7 +38,7 @@ class GeneralUtility:
         dict_ini_file = {}
         dir_name = os.path.dirname(os.path.abspath(__file__))
         ini_name = "kereta-cepat.ini"
-        ini_file_path = f"{dir_name}\\ini\\{ini_name}"
+        ini_file_path = f"{dir_name}/ini/{ini_name}"
         config_object = configparser.ConfigParser()
         with open(ini_file_path, "r") as file_object:
             config_object.read_file(file_object)
@@ -51,7 +51,7 @@ class GeneralUtility:
     def static_write_logs(log_message=None):
         dir_name = os.path.dirname(os.path.abspath(__file__))
         log_name = f"kereta-cepat-{GeneralUtility.static_get_date_today()}.log"
-        log_file_path = f"{dir_name}\\logs\\{log_name}"
+        log_file_path = f"{dir_name}/logs/{log_name}"
         log_messages = f"[{GeneralUtility.static_get_datetime_today()}] "
         log_messages += f"{log_message}"
         with open(log_file_path, "a") as file_object:
