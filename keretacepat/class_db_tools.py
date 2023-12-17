@@ -148,3 +148,15 @@ class DBTools:
         self.create_table_kereta_cepat()
         self.static_show_table()
         self.disconnect_db()
+
+    def update_config(self):
+        sql_query = (f"update kereta_cepat_config set last_checked = '{datetime.now().strftime('%Y-%m-%dT%H:%M:%SZ')}' "
+                     f"where config_name = 'kereta_cepat';")  # '2018-09-05T14:09:03Z'
+        self.db_cursor.execute(sql_query)
+        self.db_connect.commit()
+
+    def wrapper_update_config(self):
+        self.connect_db()
+        # self.show_table()
+        self.update_config()
+        self.disconnect_db()
