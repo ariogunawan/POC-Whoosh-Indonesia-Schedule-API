@@ -11,7 +11,7 @@ list_db_records = None
 
 if __name__ == "__main__":
     GeneralUtility.static_write_logs(f"Process started")
-    
+
     # READ CONFIGURATION FILES TO EXTRACT THE INPUT VARIABLES """
     input_dict_ini = GeneralUtility.static_read_ini_file()
     # CREATE NEW BOOKING OBJECT BASED ON THE INPUT DATE """
@@ -49,4 +49,6 @@ if __name__ == "__main__":
             GeneralUtility.static_write_logs(f"Nothing to check with whoosh")
     else:
         GeneralUtility.static_write_logs(f"No date {book_date} to add")
+    # Update last checked datetime in config table
+    db_kereta.wrapper_update_config()
     GeneralUtility.static_write_logs(f"============= Process completed =============")
