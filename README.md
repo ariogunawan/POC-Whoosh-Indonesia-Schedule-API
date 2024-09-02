@@ -24,7 +24,7 @@ This repository contains a Proof of Concept (POC) for checking the schedule of W
 1. Clone the repository:
     ```bash
     git clone https://github.com/ariogunawan/POC-Whoosh-Indonesia-Schedule-API.git
-    cd POC-whoosh-indonesia-schedule-api
+    cd POC-Whoosh-Indonesia-Schedule-API
     ```
 
 2. Install the required packages:
