@@ -4,11 +4,10 @@ import requests
 
 
 class BotLine:
-    secret_token = ("oaHf8Ga4TB+Smix+YLUQ5N0afFJl1ZfpoDJGbBRqK0g6JlqcBFrt/HPyUVj9skXqw6HI1LoCxB3WY+8W2aFTW"
-                    "EPIMZ4YFOJXrIPj6MBh2YbtSHl3Exu8PgUwhJs8rBxnkJE7VFuq/iS/jUj7E0DvwgdB04t89/1O/w1cDnyilFU=")
+    secret_token = ("")
     endpoint_url = "https://api.line.me/v2/bot/message/push"
-    destination_id_test = "Ud6929498461092407aad485547e46625"  # Chat Bot
-    destination_id_real = "Cdec501c9c1cc6671ca8d86440e4e28b2"  # Group Keluarga
+    destination_id_test = ""  # Chat Bot
+    destination_id_real = ""  # Group Keluarga
     auth_bearer = f"Bearer {secret_token}"
     headers = {"Content-Type": "application/json", "Authorization": auth_bearer}
 
